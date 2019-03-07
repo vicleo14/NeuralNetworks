@@ -18,12 +18,26 @@ function [] = 	P02_Hamming_2014081038()
     sizeW1=[R Inf];
     W1=fscanf(fileVectores,"%d",sizeW1);
     W1=W1.';
-    a1=W1*p;
-    a1
     [S,R]=size(W1);
-    b=zeros(S,1);
-    b=b+R;
-    b
+    
+    b=zeros(S,1)+R;
+    %Dado que para la capa feedforward la funcion de transferencia es
+    %purelin(n) y purelin esta definida como purelin(n)=n, entonces
+    %evitamos la variable n y asignamos directamente a 'a1'
+    a1=W1*p+b;
+    a2=a1;
+    epsilon=1/(S-1)-0.1;
+    epsilon=epsilon*rand +0.1;
+    W2=zeros(S,S)-epsilon;
+    
+    for i=1:S
+        W2(i,i)=1;
+    end
+    W2
+    
+   
+    
+    
     
     
 end
