@@ -1,0 +1,245 @@
+******************************************************COMPUERTA NOT
+1)Prueba 1
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): NOT
+Indica los valores de W:
+W[1]:1
+Ingrese el valor de umbral: 1
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Falló el aprendizaje en d2
+Quieres volver a intentar(Si/No)?S
+Operation terminated by user during P01_McPitts_2014081038 (line 51)
+ 
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): NOT
+Indica los valores de W:
+W[1]:1
+Ingrese el valor de umbral: 1
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Falló el aprendizaje en d2
+Quieres volver a intentar(Si/No)?Si
+Indica los valores de W:
+W[1]:-1
+Ingrese el valor de umbral: 2
+
+>>>>>Época 2:
+
+Aprendizaje exitoso en d1
+Falló el aprendizaje en d2
+Quieres volver a intentar(Si/No)?No
+
+2)Prueba 2
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): NOT
+Indica los valores de W:
+W[1]:-1
+Ingrese el valor de umbral: -1
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
+>> 
+
+3)Prueba 3
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): NOT
+Indica los valores de W:
+W[1]:5
+Ingrese el valor de umbral: 4
+
+>>>>>Época 1:
+
+Falló el aprendizaje en d1
+Quieres volver a intentar(Si/No)?Si
+Indica los valores de W:
+W[1]:-1
+Ingrese el valor de umbral: -1
+
+Aprendizaje exitoso en d2
+>>>>>Época 2:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
+
+
+**********************************COMPUERTA OR
+1)Prueba 1
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): OR
+Ingrese el número de entradas(R): 2
+Indica los valores de W:
+W[1]:4
+W[2]:5
+Ingrese el valor de umbral: 3
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
+
+2)Prueba 2
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): OR
+Ingrese el número de entradas(R): 3
+Indica los valores de W:
+W[1]:-2
+W[2]:4
+W[3]:3
+Ingrese el valor de umbral: -3
+
+>>>>>Época 1:
+
+Falló el aprendizaje en d1
+Quieres volver a intentar(Si/No)?Si
+Indica los valores de W:
+W[1]:2
+W[2]:3
+W[3]:4
+Ingrese el valor de umbral: 1
+
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+Aprendizaje exitoso en d5
+Aprendizaje exitoso en d6
+Aprendizaje exitoso en d7
+Aprendizaje exitoso en d8
+>>>>>Época 2:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+Aprendizaje exitoso en d5
+Aprendizaje exitoso en d6
+Aprendizaje exitoso en d7
+Aprendizaje exitoso en d8
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
+
+*******************COMPUERTA AND
+1)Prueba 1
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): AND
+Ingrese el número de entradas(R): 2
+Indica los valores de W:
+W[1]:4
+W[2]:5
+Ingrese el valor de umbral: 8
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
+>> 
+
+2)Prueba 2
+
+>> P01_McPitts_2014081038
+Ingrese la compuerta que quieres utilizar(AND, OR, NOT): AND
+Ingrese el número de entradas(R): 5
+Indica los valores de W:
+W[1]:1
+W[2]:2
+W[3]:3
+W[4]:4
+W[5]:5
+Ingrese el valor de umbral: 10
+
+>>>>>Época 1:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+Aprendizaje exitoso en d5
+Aprendizaje exitoso en d6
+Aprendizaje exitoso en d7
+Falló el aprendizaje en d8
+Quieres volver a intentar(Si/No)?Si
+Indica los valores de W:
+W[1]:1
+W[2]:2
+W[3]:3
+W[4]:4
+W[5]:5
+Ingrese el valor de umbral: 14
+
+Aprendizaje exitoso en d9
+Aprendizaje exitoso en d10
+Aprendizaje exitoso en d11
+Aprendizaje exitoso en d12
+Aprendizaje exitoso en d13
+Aprendizaje exitoso en d14
+Aprendizaje exitoso en d15
+Aprendizaje exitoso en d16
+Aprendizaje exitoso en d17
+Aprendizaje exitoso en d18
+Aprendizaje exitoso en d19
+Aprendizaje exitoso en d20
+Aprendizaje exitoso en d21
+Aprendizaje exitoso en d22
+Aprendizaje exitoso en d23
+Aprendizaje exitoso en d24
+Aprendizaje exitoso en d25
+Aprendizaje exitoso en d26
+Aprendizaje exitoso en d27
+Aprendizaje exitoso en d28
+Aprendizaje exitoso en d29
+Aprendizaje exitoso en d30
+Aprendizaje exitoso en d31
+Aprendizaje exitoso en d32
+>>>>>Época 2:
+
+Aprendizaje exitoso en d1
+Aprendizaje exitoso en d2
+Aprendizaje exitoso en d3
+Aprendizaje exitoso en d4
+Aprendizaje exitoso en d5
+Aprendizaje exitoso en d6
+Aprendizaje exitoso en d7
+Aprendizaje exitoso en d8
+Aprendizaje exitoso en d9
+Aprendizaje exitoso en d10
+Aprendizaje exitoso en d11
+Aprendizaje exitoso en d12
+Aprendizaje exitoso en d13
+Aprendizaje exitoso en d14
+Aprendizaje exitoso en d15
+Aprendizaje exitoso en d16
+Aprendizaje exitoso en d17
+Aprendizaje exitoso en d18
+Aprendizaje exitoso en d19
+Aprendizaje exitoso en d20
+Aprendizaje exitoso en d21
+Aprendizaje exitoso en d22
+Aprendizaje exitoso en d23
+Aprendizaje exitoso en d24
+Aprendizaje exitoso en d25
+Aprendizaje exitoso en d26
+Aprendizaje exitoso en d27
+Aprendizaje exitoso en d28
+Aprendizaje exitoso en d29
+Aprendizaje exitoso en d30
+Aprendizaje exitoso en d31
+Aprendizaje exitoso en d32
+¡¡¡APRENDIZAJE DE LA CELULA EXITOSA!!!
