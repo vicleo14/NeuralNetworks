@@ -51,13 +51,15 @@ function [] = 	P02_Hamming_2014081038()
     converge=false;
     numCeros=0;
     formato=[1 S];
-    
+    etiquetas="";
     for i=1:50
         numCeros=0;
         fprintf("%d\n",i);
         a2=W2*a2;
         results=fopen("results.txt","a");
         fprintf(results,"%d ",i);
+        cadAux=strcat("a2",string(i)," ");
+        etiquetas=strcat(etiquetas,cadAux);
         for j=1:S
             if(a2(j)<0)
                 a2(j)=0;
@@ -86,9 +88,10 @@ function [] = 	P02_Hamming_2014081038()
     t=Res(1,:);
     Aux=Res(2:end,:)
     plot(t,Aux,"o-");
-    title('Red de Hamming')
-    xlabel('Tiempo')
-    ylabel('Valores')
+    title('Red de Hamming');
+    xlabel('Tiempo');
+    ylabel('Valores');
+    legend(split(etiquetas));
     
    
     
