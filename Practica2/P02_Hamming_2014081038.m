@@ -3,17 +3,25 @@ function [] = 	P02_Hamming_2014081038()
 %   Implementacion de la red de Hamming con lectura de vectores 
 %   prototipo y vector de entrada desde archivo txt; asi como la
 %   graficacion de los resultados en las iteraciones
-%Fecha de elaboracion: 2019/03/07
+%Fecha de elaboración: 2019/03/07
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
+    
+    converge=false;
+    numCeros=0;
+    etiquetas="";
+    bandera=0;
+    claseGanadora="";
+    iteracionesMaximas=50;
 
-    archivoVecIn=input('Ingrese el nombre del archivo que contiene el vector de entrada: ','s');
+
+    archivoVecIn=input('Ingrese el nombre del archivo que contiene el vector de entrada(sin extension .txt): ','s');
     p=LecturaP(archivoVecIn);
     
     [R,n]=size(p);
     
-    archivoVectores=input('Ingrese el nombre del archivo que contiene los vectores prototipo: ','s');
+    archivoVectores=input('Ingrese el nombre del archivo que contiene los vectores prototipo(sin extension .txt): ','s');
     W1=LecturaW1(archivoVectores,R);
     [S,R]=size(W1);
     
@@ -25,15 +33,7 @@ function [] = 	P02_Hamming_2014081038()
     %Asignamos a1 a a2 ya que esta es nuestra condicion inicial
     a2=a1;
     GuardarArchivo(a2,0,"w");
-    W2=GenerarW2(S);
-   
-    converge=false;
-    numCeros=0;
-    formato=[1 S];
-    etiquetas="";
-    bandera=0;
-    claseGanadora=""
-    iteracionesMaximas=50;
+    W2=GenerarW2(S);   
     for i=1:iteracionesMaximas
         %Genearcion de etiquetas para la grafica
         cadAux=strcat("a2",string(i)," ");

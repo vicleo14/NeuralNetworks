@@ -1,16 +1,13 @@
 function W1 = LecturaW1(archivoVectores,R)
 %   Con el fin de un código mas legible se crea esta función que se
-%   encargará de de leer nuestros vectores prototipo que generarán la matiz de 
-%   pesos W1 de la red a través del
+%   encargará de de leer nuestros vectores prototipo que generarán la matiz de pesos W1 de la red a través del
 %   archivo 'archivoVectores'. Esta variable es una cadena a la que el código
 %   mismo le concatenará la extensión txt(.txt) por lo que al ingresar por
 %   teclado el nombre del archivo, este debe ser un archivo TXT y no se le
 %   debe colocar la extensión del archivo.
-%   También recibe el número de entradas a la red(R) para darle el formato adecuado a 
-%   la matriz de pesos. Esto es con el objetivo de hacer el código maás versatil para 
-%   que soporte procesamiento de distintos vectores de entrada siempre y cuando las
-%   columnas de W1 y filas de nuestro vector de entrada(p) coincidan en los archivos TXT 
-%Fecha de elaboración: 2019/03/07
+%   También recibe el número de entradas a la red(R) para darle el formato adecuado a la matriz de pesos. Esto es con el objetivo 
+%    de hacer el código maás versatil para que reciba  
+%Fecha de elaboracion: 2019/03/07
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)

@@ -3,6 +3,10 @@ function Graficar (S,etiquetas)
     %para poder leer de forma adecuada el archivo que contiene los datos y
     %'etiquetas' contiene los elementos que se mostrarn en legend de la
     %grafica
+%Fecha de elaboración: 2019/03/07
+%Autor: Morales Flores Victor Leonel
+%Asignatura: Neural Networks
+%Escuela: ESCOM-IPN(MX)
 
      %Abrimos el archivo archivo results todos los valores que se crearon en
     %las n iteraciones 
@@ -27,7 +31,5 @@ function Graficar (S,etiquetas)
     ylabel('Valores');
     et=strsplit(etiquetas);
     legend(et);
-
-
 end
 
