@@ -32,41 +32,25 @@ function [] = 	P02_Hamming_2014081038()
     formato=[1 S];
     etiquetas="";
     bandera=0;
-    claseGanadora=""
-    iteracionesMaximas=50;
-    for i=1:iteracionesMaximas
-        %Genearcion de etiquetas para la grafica
+    for i=1:50
+        numCeros=0;
+        a2=W2*a2;
         cadAux=strcat("a2",string(i)," ");
         etiquetas=strcat(etiquetas,cadAux);
-        % Multiplicacion de la matriz de pesos W2 por a2(t) y asignacion a
-        % a2(t+1). Debido a la forma en que se opera(primero hace operacion
-        %y despues  la asignacion a la variable) podemos hacer uso de una sola
-        % variable a2
-        a2=W2*a2;
         
-        %Funcion que revisa la convergencia de a2
-        [a2,converge,claseGanadora]=RevisarConvergencia(a2,S);
-        %Guarda en nuestro archivo los resultados con argumento 'a' para
-        %que escriba al final del documento.
+        [a2,converge,numCeros]=RevisarConvergencia(a2,S);
         GuardarArchivo(a2,i,"a");
-        %Bloque de codigo para hacer una iteración mas despues de que
-        %converge la primera vez. Esto es para confirmar la convergencia
         if(converge)
            if(bandera==0)
                bandera=1;
-               claseGanadora=cadAux;
                continue;
+  
            else
                break;
            end
-           
         end
-    end
-   
-    if converge
-        fprintf("La clase ganadora fue: %s",claseGanadora);
-    else
-        fprintf("No se logró convergencia tras %d iteraciones",iteracionesMaximas);
+           
     end
     Graficar(S,etiquetas);
+   
 end
