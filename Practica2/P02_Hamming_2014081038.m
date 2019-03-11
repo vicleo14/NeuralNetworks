@@ -13,7 +13,7 @@ function [] = 	P02_Hamming_2014081038()
     etiquetas="";
     bandera=0;
     claseGanadora="";
-    iteracionesMaximas=50;
+    iteracionesMaximas=150;
 
 
     archivoVecIn=input('Ingrese el nombre del archivo que contiene el vector de entrada(sin extension .txt): ','s');
@@ -24,7 +24,8 @@ function [] = 	P02_Hamming_2014081038()
     archivoVectores=input('Ingrese el nombre del archivo que contiene los vectores prototipo(sin extension .txt): ','s');
     W1=LecturaW1(archivoVectores,R);
     [S,R]=size(W1);
-    
+    W1
+    p
     b=zeros(S,1)+R;
     %Dado que para la capa feedforward la funcion de transferencia es
     %purelin(n) y purelin esta definida como purelin(n)=n, entonces
@@ -32,6 +33,7 @@ function [] = 	P02_Hamming_2014081038()
     a1=W1*p+b;
     %Asignamos a1 a a2 ya que esta es nuestra condicion inicial
     a2=a1;
+    %a2
     GuardarArchivo(a2,0,"w");
     W2=GenerarW2(S);   
     for i=1:iteracionesMaximas
@@ -46,6 +48,7 @@ function [] = 	P02_Hamming_2014081038()
         
         %Funcion que revisa la convergencia de a2
         [a2,converge,claseGanadora]=RevisarConvergencia(a2,S);
+        %a2
         %Guarda en nuestro archivo los resultados con argumento 'a' para
         %que escriba al final del documento.
         GuardarArchivo(a2,i,"a");
@@ -64,9 +67,9 @@ function [] = 	P02_Hamming_2014081038()
     end
    
     if converge
-        fprintf("La clase ganadora fue: %s",claseGanadora);
+        fprintf("La clase ganadora fue: %s\n",claseGanadora);
     else
-        fprintf("No se logró convergencia tras %d iteraciones",iteracionesMaximas);
+        fprintf("No se logró convergencia tras %d iteraciones\n",iteracionesMaximas);
     end
     Graficar(S,etiquetas);
 end

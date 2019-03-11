@@ -12,7 +12,7 @@ function W2 = GenerarW2(S)
     while epsilon==0
         epsilon=(1/(S-1))*rand;
     end
-    fprintf("Epsilon:%d",epsilon);
+    fprintf("Epsilon:%d\n",epsilon);
     %Creamos la matriz W2 con ceros menos epsilon
     W2=zeros(S,S)-epsilon;
     %Llena la diagonal de la matriz con 1's.

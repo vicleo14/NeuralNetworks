@@ -19,6 +19,7 @@ function W1 = LecturaW1(archivoVectores,R)
     W1=fscanf(fileVectores,"%d",sizeW1);
     fclose(fileVectores);
     W1=W1.';
+    
 
 end
 

@@ -20,6 +20,7 @@ claseGanadora="";
             claseGanadora=strcat("a2",string(j)," ");
         end
     end
+    
     if numCeros== S-1 && converge==false
         converge=true;
     end
