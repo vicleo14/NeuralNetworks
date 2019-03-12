@@ -9,7 +9,6 @@ function [] = 	P02_Hamming_2014081038()
 %Escuela: ESCOM-IPN(MX)
     
     converge=false;
-    numCeros=0;
     etiquetas="";
     bandera=0;
     claseGanadora="";
@@ -24,8 +23,6 @@ function [] = 	P02_Hamming_2014081038()
     archivoVectores=input('Ingrese el nombre del archivo que contiene los vectores prototipo(sin extension .txt): ','s');
     W1=LecturaW1(archivoVectores,R);
     [S,R]=size(W1);
-    W1
-    p
     b=zeros(S,1)+R;
     %Dado que para la capa feedforward la funcion de transferencia es
     %purelin(n) y purelin esta definida como purelin(n)=n, entonces
@@ -35,20 +32,22 @@ function [] = 	P02_Hamming_2014081038()
     a2=a1;
     %a2
     GuardarArchivo(a2,0,"w");
-    W2=GenerarW2(S);   
+    W2=GenerarW2(S); 
+    for k=1:S
+        cadAux=strcat("a2",string(k)," ");
+        etiquetas(k)=cadAux;
+    end
+    
     for i=1:iteracionesMaximas
         %Genearcion de etiquetas para la grafica
-        cadAux=strcat("a2",string(i)," ");
-        etiquetas=strcat(etiquetas,cadAux);
+        
         % Multiplicacion de la matriz de pesos W2 por a2(t) y asignacion a
         % a2(t+1). Debido a la forma en que se opera(primero hace operacion
         %y despues  la asignacion a la variable) podemos hacer uso de una sola
         % variable a2
         a2=W2*a2;
-        
         %Funcion que revisa la convergencia de a2
         [a2,converge,claseGanadora]=RevisarConvergencia(a2,S);
-        %a2
         %Guarda en nuestro archivo los resultados con argumento 'a' para
         %que escriba al final del documento.
         GuardarArchivo(a2,i,"a");

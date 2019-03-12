@@ -24,12 +24,15 @@ function Graficar (S,etiquetas)
     %los valores generados y elimina la primer fila que era del numero de
     %iteracion
     Aux=Res(2:end,:);
+    Aux=Aux.';
     %Configuracion de la grafica a mostrar
     plot(t,Aux,"o-");
+    xticks(0:1:100);
+    yticks(0:150);
     title('Red de Hamming');
     xlabel('Tiempo');
     ylabel('Valores');
-    et=strsplit(etiquetas);
-    legend(et);
+    %et=strsplit(etiquetas);
+    legend(etiquetas);
 end
 

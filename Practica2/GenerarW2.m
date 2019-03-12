@@ -9,7 +9,7 @@ function W2 = GenerarW2(S)
 %Escuela: ESCOM-IPN(MX)
  
     epsilon=0;
-    while epsilon==0
+    while epsilon<=0
         epsilon=(1/(S-1))*rand;
     end
     fprintf("Epsilon:%d\n",epsilon);
