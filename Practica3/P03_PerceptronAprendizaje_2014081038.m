@@ -14,13 +14,15 @@ function [] = P03_PerceptronAprendizaje()
     archivoDS=input('Ingrese el nombre del archivo que contiene el dataset(sin extension .txt): ','s');
     maxEpocas=input('Ingrese el maximo de épocas: ');
     [pn,targets,s,r]=lecturaDataSet(archivoDS);
-    targets
+    %targets
     w=generacionW(s,r);
-    b=generacionBias(s);
+    b=generacionBias(s);    
     vecesAprendizaje=1;
+    GuardarArchivo(epoca,w,b,"w");
     [numEntradas,tamEntrada]=size(pn);
     while(vecesAprendizaje>0)
         vecesAprendizaje=0;
+        
         epoca=epoca+1;
         if(epoca>maxEpocas)
             fprintf("\n¡¡¡El programa no logró converger en %d épocas!!!\n",maxEpocas)
@@ -38,10 +40,12 @@ function [] = P03_PerceptronAprendizaje()
                [w,b]=reglaAprendizajePerceptron(w,b,e,p);
                %fprintf("\nSe aplica regla de aprendizaje");
            end
+           
         end
-        
+        GuardarArchivo(epoca,w,b,"a");
     end
     graficaFronteras(pn,b,w);
+    GraficarEvolucion(s,epoca)
     if(vecesAprendizaje==0)
          w
          b
