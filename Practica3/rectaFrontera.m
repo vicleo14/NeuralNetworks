@@ -28,7 +28,5 @@ function [x,y,m] = rectaFrontera(bias,w,p)
         format long 
         y(i)=mi*x(i)+b;
     end
-    x
-    y
 end
 

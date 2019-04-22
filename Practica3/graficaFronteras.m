@@ -5,7 +5,7 @@ function [] = graficaFronteras(puntos,bias,w)
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
-    
+    figure(1)
     xpuntos=puntos(:,1);
     ypuntos=puntos(:,2);
     xejeP1=[min(xpuntos)-1,max(xpuntos)+1];    
@@ -23,11 +23,11 @@ function [] = graficaFronteras(puntos,bias,w)
         [xfrontera,yfrontera,m]=rectaFrontera(bp,wp,puntos);
         plot(xfrontera,yfrontera,"g-");
         hold on;
-        [xvector,yvector]=vectorW(m,wp);
-        quiver(xvector(1),yvector(1),xvector(2),yvector(2),1);
-        hold on; 
+        %[xvector,yvector]=vectorW(m,wp);
+        %quiver(xvector(1),yvector(1),xvector(2),yvector(2),1);
+        %hold on; 
     end
-    axis([min(xpuntos)-1 max(xpuntos)+1 min(ypuntos)-1 max(xpuntos)+1])
+    axis([min(xpuntos)-1 max(xpuntos)+1 min(ypuntos)-1 max(ypuntos)+1])
     plot(xpuntos,ypuntos,"ro");
     xticks(min(xpuntos):1:max(xpuntos));
     yticks(min(ypuntos):1:max(ypuntos));
