@@ -55,24 +55,18 @@ function [] = P04_RedAdaline_2014081038()
            end
         end
         GuardarArchivo(epoca,w,b,"a",modo);
-        if Eepoch>0
-            Eepoch=Eepoch/numEntradas;
-        elseif Eepoch<0
-            Eepoch=(-1)*(Eepoch)/numEntradas;
-        end
-        %Eepoch
-        %numEntradas
+        Eepoch=abs(Eepoch);
         GuardarEepoch(epoca,s,Eepoch,"a");
         %Verifica que Eepoch sea menor que eepoch. En este caso para el
         %aprendizaje y se dice que la red aprendió satisfactoriamente.
-        if(Eepoch<eepoch)
+        if(max(Eepoch)<eepoch )
             fprintf("\n>>>>>>El valor de error de la red es menor al error tolerable. Acaba aprendizaje");
             break;
         end
     end
     
-    GraficarEvolucion(tamEntrada,epoca);
-    GraficarEepoch();
+    GraficarEvolucion(tamEntrada,s,modo);
+    GraficarEepoch(s);
     if(modo==0)
         graficaFronteras(pn,b,w);
     end
