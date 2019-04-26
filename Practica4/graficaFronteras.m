@@ -5,7 +5,7 @@ function [] = graficaFronteras(puntos,bias,w)
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
-    figure(1)
+    figure(3)
     xpuntos=puntos(:,1);
     ypuntos=puntos(:,2);
     xejeP1=[min(xpuntos)-1,max(xpuntos)+1];    

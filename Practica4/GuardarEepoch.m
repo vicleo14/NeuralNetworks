@@ -1,4 +1,4 @@
-function GuardarEepoch(epoca,Eepoch,opc)
+function GuardarEepoch(epoca,s,Eepoch,opc)
 %P3: Aprendizaje del perceptron 
 %   Con el fin de un código mas legible se crea esta función encargará
 %   de escribir en un archivo de texto 'Eepoch.txt' con todos los valoers 
@@ -10,6 +10,10 @@ function GuardarEepoch(epoca,Eepoch,opc)
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
     results=fopen("Eepoch.txt",opc);
-    fprintf(results,"%d %d\n",epoca,Eepoch);
+    fprintf(results,"%d ",epoca);
+    for i=1:s
+       fprintf(results,"%d ",Eepoch(i,1)); 
+    end
+    fprintf(results,"\n");
     fclose(results);
 end

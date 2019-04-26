@@ -9,7 +9,7 @@ function [wp,bp] = reglaAprendizajeAdaline(w,b,e,p,alfa)
     format long
     wp=w+2*alfa*(e*p.');
     format long
-    bp=b+e;
+    bp=b+2*alfa*e;
     
 end
 

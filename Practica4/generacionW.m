@@ -6,6 +6,6 @@ function w = generacionW(s,r)
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
-	w=rand(s,r);
+	w=2*rand(s,r)-1;
 end
 

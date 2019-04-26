@@ -6,6 +6,6 @@ function bias = generacionBias(s)
 %Autor: Morales Flores Victor Leonel
 %Asignatura: Neural Networks
 %Escuela: ESCOM-IPN(MX)
-    bias=rand(s,1);
+    bias=2*rand(s,1)-1;
 end
 

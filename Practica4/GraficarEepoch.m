@@ -10,7 +10,7 @@ function GraficarEepoch ()
     %las n iteraciones 
     results = fopen('Eepoch.txt','r');
     %Formato de lectura del archivo
-    filas=2
+    filas=2;
     sizeRes=[filas Inf];
     %Se recupera en Res la matriz de resultados y se cierra el archivo
     %results.txt
