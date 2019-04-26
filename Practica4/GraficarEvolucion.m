@@ -23,11 +23,11 @@ function GraficarEvolucion (wsizec,S,modo)
         fila=1;
         aux=1;
         for i=2:2:c-S
-            plot(epoca,Res(:,i),"o-");
+            plot(epoca,Res(:,i),"-");
             hold on
             etiquetas(aux)=strcat("w",string(fila),string(1));
             aux=aux+1;
-            plot(epoca,Res(:,i+1),"o-");
+            plot(epoca,Res(:,i+1),"-");
             hold on
             etiquetas(aux)=strcat("w",string(fila),string(2));
             aux=aux+1;
@@ -35,7 +35,7 @@ function GraficarEvolucion (wsizec,S,modo)
         end
         fila=1;
         for i=c-S+1:c
-            plot(epoca,Res(:,i),"o-");
+            plot(epoca,Res(:,i),"-");
             hold on
             etiquetas(aux)=strcat("b",string(fila));
             aux=aux+1;
@@ -68,13 +68,13 @@ function GraficarEvolucion (wsizec,S,modo)
         %figure(2)
         %Grafica pesos de la red
         for i=1:c
-            plot(epoca,w(:,i),"o-");
+            plot(epoca,w(:,i),"-");
             hold on
             etiquetas(aux)=strcat("w",string(1),string(i));
             aux=aux+1;   
         end
         %Grafica bias
-        plot(epoca,bias(:,1),"o-");
+        plot(epoca,bias(:,1),"-");
         hold on
         etiquetas(aux)=strcat("b",string(1));
     end

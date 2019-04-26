@@ -13,15 +13,15 @@ function [] = P04_RedAdaline_2014081038()
     b=zeros(1,1);
     e=0;
     archivoDS=input('Ingrese el nombre del archivo que contiene el dataset(sin extension .txt): ','s');
+    %archivoDSC=input('Ingrese el nombre del archivo que contiene el dataset completo(sin extension .txt): ','s');
     modo=input('Ingrese el modo de operación(0: clasificador,1:regresor): ');
     eepoch_max=input('Ingrese el maximo de épocas(e_epoch max): ');
     eepoch=input('Ingrese el maximo de error e_epoch: ');
     alfa=input('Ingrese el valor de alfa(entre 0 y 1): ');
     [pn,targets,s,r]=lecturaDataSet(archivoDS,modo);
-    %targets
+    %[pnC,targetsC,sC,rC]=lecturaDataSet(archivoDSC,modo);
+    %[numEntradasC,tamEntradaC]=size(pnC);
     Eepoch0=zeros(s,1);
-    pn
-    targets
     w=generacionW(s,r)
     b=generacionBias(s)    
     vecesAprendizaje=1;
@@ -38,7 +38,7 @@ function [] = P04_RedAdaline_2014081038()
             fprintf("\n¡¡¡El programa no logró converger en %d épocas!!!\n",eepoch_max)
             break;
         end
-        fprintf("\n>>>>>Epoca: %d\n",epoca)
+        %fprintf("\n>>>>>Epoca: %d\n",epoca)
         for i=1:numEntradas
            p=pn(i,:).';
            %No se requiere funcion de activacion debido a que usa la
@@ -56,11 +56,15 @@ function [] = P04_RedAdaline_2014081038()
         end
         GuardarArchivo(epoca,w,b,"a",modo);
         Eepoch=abs(Eepoch);
+        %Eepoch=Eepoch/numEntradas
+        %numEntradas
+        
         GuardarEepoch(epoca,s,Eepoch,"a");
         %Verifica que Eepoch sea menor que eepoch. En este caso para el
         %aprendizaje y se dice que la red aprendió satisfactoriamente.
         if(max(Eepoch)<eepoch )
             fprintf("\n>>>>>>El valor de error de la red es menor al error tolerable. Acaba aprendizaje");
+            fprintf("\n>>>>>Epoca: %d\n",epoca)
             break;
         end
     end

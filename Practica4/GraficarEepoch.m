@@ -26,13 +26,13 @@ function GraficarEepoch (s)
     figure(2)
     %Grafica de Eepoch
     for i=1:s
-        plot(epoca,Eepoch(:,i),"o-");
+        plot(epoca,Eepoch(:,i),"-");
         etiquetas(i)=strcat("Epoch",string(i));
         hold on
     end
     %Configuracion de la grafica a mostrar
     xticks(0:1:100);
-    yticks(-150:150);
+    yticks(-1000:1000);
     title('Evolución de Eepoch');
     xlabel('Épocas');
     ylabel('Eepoch');
